@@ -34,6 +34,6 @@
     $con->query($addApplicationQuery);
 
     // go back to index page
-    echo '<script>window.location.href = "../index.html";</script>';
+    echo '<script>window.location.href = "../index.php";</script>';
 
 ?>

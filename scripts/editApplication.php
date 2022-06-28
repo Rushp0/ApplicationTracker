@@ -41,6 +41,6 @@
         echo $con->error;
     }
 
-    echo "<script> window.location = \"../index.html\" </script>"
+    echo "<script> window.location = \"../index.php\" </script>"
 
 ?>
