@@ -1,0 +1,179 @@
+body{
+    background-color: rgb(195, 195, 195);
+}
+
+/* Banner Styling */
+#top-banner{
+    background-color: rgb(51, 85, 138);
+    height: 50px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+}
+#top-banner>p{
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-weight: bold;
+    font-size: 30px;
+    position: fixed;
+    margin-top: 0px;
+    padding-top: 10px;
+    padding-left: 10px;
+    color:whitesmoke;
+    
+}
+
+/* Application Summary Styling */
+#application-summary{
+    margin-top: 100px;
+    width: 100%;   
+}
+.card{
+    display: inline-block;
+    width: 275px;
+    height: 150px;
+    margin-left: 65px;
+    background-color: rgb(215, 215, 215);
+    border-radius: 2px;
+    cursor: pointer;
+}.card>p{
+    margin-left: 20px;
+    padding:0px;
+    width:fit-content;
+    margin-top: 20px;
+    border: thin;
+    border-radius: 5px;
+}
+.card>p:first-child{
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-style: bold;
+    font-size:40px;
+}
+.card>p:nth-child(2){
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 20px; 
+}
+
+/* All Applications Div Styling */
+#all-applications{
+    font-family: "Lucida Console", "Courier New", monospace;
+    background-color: rgb(215, 215, 215);
+    width: 95%;
+    margin: auto;
+    margin-top: 30px;
+    height:max-content;
+    border-radius: 5px;
+    padding-bottom: 30px;
+}
+#all-applications>p{
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 10px;
+    padding-top: 15px;
+    width: fit-content;
+    cursor: pointer;
+}
+
+/* Application Table Styling */
+#application-table{
+    border-collapse: collapse;
+    width: 95%;
+    margin:auto;
+    text-align: center;
+    margin-top: 38px;
+}
+th{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-collapse: collapse;
+    color:gray;
+    font-weight:lighter;
+}
+td{
+    font-size: 15px;
+}
+tr:hover{
+    background-color: rgb(199, 199, 199);
+}
+
+/* Modal Styling */
+#add-application-modal, #edit-application-modal{
+    margin: auto;
+    position: absolute;
+    top: 15%;
+    left: 30%;
+    z-index: 1;
+    box-shadow: 1px 1px 10px 1px;
+    background-color: rgba(255,255,255, 0.8);
+    width: 40%;
+    border-radius: 10px;
+    visibility: hidden;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(10px);
+}
+#add-application-modal>p, #edit-application-modal>p{
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+.cancel{
+    color: black;
+}
+.cancel:hover{
+    background-color: gray;
+}
+.delete{
+    color: red;
+}
+.delete:hover{
+    background-color: red;
+    color: white;
+}
+form{
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+input, select, button{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 12px;
+}
+input[type=submit]:hover{
+    background-color: green;
+    color:white;
+}
+
+tr .material-symbols-outlined{
+    opacity: 0;
+}
+tr:hover .material-symbols-outlined{
+    opacity: 1;
+}
+
+/* Search Bar Styling */
+#search-bar{
+    width: 200px;
+    height: 10px;
+    position: absolute;
+    top: 40%;
+    left: 8%;
+    border: thin solid black;
+    border-radius: 0px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding-left: 2px;
+    background-color: rgb(215, 215, 215);
+    outline: none;
+    visibility: hidden;
+}
