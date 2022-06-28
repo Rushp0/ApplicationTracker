@@ -34,6 +34,6 @@
     $con->query($addApplicationQuery);
 
     // go back to index page
-    echo '<script>window.location.href = "../index.php";</script>';
+    echo '<script>window.location.href = "https://applicationtracker0.herokuapp.com";</script>';
 
 ?>
