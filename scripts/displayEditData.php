@@ -3,7 +3,7 @@
     
     $applicationKey = $_REQUEST["q"];
 
-    $getApplicationDataQuery = "SELECT * FROM `applications` WHERE `application key`=" . $applicationKey;
+    $getApplicationDataQuery = "SELECT * FROM `applications` WHERE `applicationkey`=" . $applicationKey;
     $results = $con->query($getApplicationDataQuery);
     $results = $results->fetch_assoc();
 

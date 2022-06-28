@@ -15,12 +15,12 @@
 
     // get previous status of application before edit
     //SELECT `status` FROM `applications` WHERE `application key` = 7
-    $previousStatusQuery = "SELECT `status` FROM `applications` WHERE `application key` =" . intval($applicationKey);
+    $previousStatusQuery = "SELECT `status` FROM `applications` WHERE `applicationkey` =" . intval($applicationKey);
     $previousStatusResults = $con->query($previousStatusQuery);
     $previousStatusResults = $previousStatusResults->fetch_assoc();
 
     if($previousStatusResults["status"] == $status){ // DO NOT UPDATE APPLICATION SUMMARY
-        $updateApplicationSummary = "UPDATE `applications` SET `status`='".$status."',`platform`='".$platform."',`date`='".$date."'" . " WHERE `application key` = ".$applicationKey;
+        $updateApplicationSummary = "UPDATE `applications` SET `status`='".$status."',`platform`='".$platform."',`date`='".$date."'" . " WHERE `applicationkey` = ".$applicationKey;
         $con->query($updateApplicationSummary);
 
     }else{ // UPDATE APPLICATION SUMMARY
@@ -36,7 +36,7 @@
         $con->query($increaseCountQuery);
 
         // update application
-        $updateApplicationSummary = "UPDATE `applications` SET `status`='".$status."',`platform`='".$platform."',`date`='".$date."'"  . " WHERE `application key` = ".$applicationKey;
+        $updateApplicationSummary = "UPDATE `applications` SET `status`='".$status."',`platform`='".$platform."',`date`='".$date."'"  . " WHERE `applicationkey` = ".$applicationKey;
         $con->query($updateApplicationSummary);
         echo $con->error;
     }

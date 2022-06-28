@@ -5,7 +5,7 @@
 
     // Update Application Summary
     // get status of application to be deleted
-    $getStatus = "SELECT `status` FROM `applications` WHERE `application key` = " . $applicationKey;
+    $getStatus = "SELECT `status` FROM `applications` WHERE `applicationkey` = " . $applicationKey;
     $statusResults = $con->query($getStatus);
     $statusResults = $statusResults->fetch_assoc();
     $status = strtolower($statusResults["status"]);
@@ -21,7 +21,7 @@
     $con->query($decreaseCountQuery);
 
     // Delete application
-    $deleteQuery = "DELETE FROM `applications` WHERE `application key` = " . $applicationKey;
+    $deleteQuery = "DELETE FROM `applications` WHERE `applicationkey` = " . $applicationKey;
     $con->query($deleteQuery);
 
 ?>

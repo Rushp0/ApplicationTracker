@@ -9,10 +9,10 @@
     error_log($company);
     
     // get application key for next application
-    $getLastApplicationKeyQuery = "SELECT `application key` FROM `applications` ORDER BY `application key` DESC";
+    $getLastApplicationKeyQuery = "SELECT `applicationkey` FROM `applications` ORDER BY `applicationkey` DESC";
     $appKeyResults = $con->query($getLastApplicationKeyQuery);
     $lastApplicationKey = $appKeyResults->fetch_assoc();
-    $newApplicationKey = $lastApplicationKey["application key"]+1;
+    $newApplicationKey = $lastApplicationKey["applicationkey"]+1;
 
     // update application summary table
     $getCurrentApplicationCounts = "SELECT * FROM `applicationSummary`";
@@ -32,7 +32,7 @@
     $con->query($updateQuery);
 
     // add application to applications table
-    $addApplicationQuery = "INSERT INTO `applications`(`application key`,`company`, `status`, `platform`, `date`) VALUES (". $newApplicationKey .",'". $company ."','".$status."','".$platform."','".$date."')";
+    $addApplicationQuery = "INSERT INTO `applications`(`applicationkey`,`company`, `status`, `platform`, `date`) VALUES (". $newApplicationKey .",'". $company ."','".$status."','".$platform."','".$date."')";
     $con->query($addApplicationQuery);
 
     // go back to index page

@@ -44,7 +44,7 @@
     
         // edit icon
         echo "<td>
-        <span class=\"material-symbols-outlined ".$row["application key"]."\" \" style=\"cursor: pointer;\" onclick=\"edit(".$row["application key"].")\">edit</span>
+        <span class=\"material-symbols-outlined ".$row["applicationkey"]."\" \" style=\"cursor: pointer;\" onclick=\"edit(".$row["applicationkey"].")\">edit</span>
         </td>";
         
         echo "</tr>";
