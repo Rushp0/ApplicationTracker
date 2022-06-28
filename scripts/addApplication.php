@@ -6,6 +6,8 @@
     $platform = $_POST["add-application-platform"];
     $date = $_POST["add-submission-date"];
 
+    error_log($company);
+    
     // get application key for next application
     $getLastApplicationKeyQuery = "SELECT `application key` FROM `applications` ORDER BY `application key` DESC";
     $appKeyResults = $con->query($getLastApplicationKeyQuery);
